@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .graph__part-canvas {
+            position: relative;
+        }
+
+        .graph__part-canvas canvas {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+        .colorPicked #box{
+            width:200px;
+            height:200px;
+            background:#fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="graph__part-canvas w-embed">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAxIiBoZWlnaHQ9IjIwMSIgdmlld0JveD0iMCAwIDIwMSAyMDEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yMDEgMTAwLjVDMjAxIDEyMi45MTcgMTkzLjUwNSAxNDQuNjkxIDE3OS43MDcgMTYyLjM1OUMxNjUuOTA5IDE4MC4wMjYgMTQ2LjYgMTkyLjU3NCAxMjQuODUxIDE5OC4wMDVDMTAzLjEwMiAyMDMuNDM3IDgwLjE2MDcgMjAxLjQ0MSA1OS42NzYzIDE5Mi4zMzVDMzkuMTkxOCAxODMuMjI5IDIyLjMzOTkgMTY3LjUzNiAxMS44MDAzIDE0Ny43NTFMNTYuMTUwMiAxMjQuMTI1QzYxLjQyIDEzNC4wMTggNjkuODQ1OSAxNDEuODY0IDgwLjA4ODEgMTQ2LjQxOEM5MC4zMzA0IDE1MC45NzEgMTAxLjgwMSAxNTEuOTY4IDExMi42NzUgMTQ5LjI1M0MxMjMuNTUgMTQ2LjUzNyAxMzMuMjA1IDE0MC4yNjMgMTQwLjEwNCAxMzEuNDI5QzE0Ny4wMDMgMTIyLjU5NSAxNTAuNzUgMTExLjcwOSAxNTAuNzUgMTAwLjVMMjAxIDEwMC41WiIgZmlsbD0iI0ZGNDAzMyIvPgo8cGF0aCBkPSJNMTEuODY1NiAxNDcuODczQzUuNjQ0NSAxMzYuMjMzIDEuNzc2OTIgMTIzLjQ4MiAwLjQ4MzY3MSAxMTAuMzQ4Qy0wLjgwOTU3OCA5Ny4yMTM2IDAuNDk2ODM3IDgzLjk1MzEgNC4zMjgzMiA3MS4zMjM3TDUyLjQxNDIgODUuOTExOEM1MC40OTg0IDkyLjIyNjYgNDkuODQ1MiA5OC44NTY4IDUwLjQ5MTggMTA1LjQyNEM1MS4xMzg1IDExMS45OTEgNTMuMDcyMyAxMTguMzY3IDU2LjE4MjggMTI0LjE4NkwxMS44NjU2IDE0Ny44NzNaIiBmaWxsPSIjRTZEM0EzIi8+CjxwYXRoIGQ9Ik00LjE4NDc2IDcxLjgwMTJDMTEuNzA3MyA0Ni41NTUxIDI4Ljg0MTUgMjUuMjcxOSA1MS44OTk0IDEyLjUzMjhMNzYuMTk5NyA1Ni41MTY0QzY0LjY3MDggNjIuODg1OSA1Ni4xMDM2IDczLjUyNzUgNTIuMzQyNCA4Ni4xNTA2TDQuMTg0NzYgNzEuODAxMloiIGZpbGw9IiM4QkI4QTIiLz4KPHBhdGggZD0iTTUxLjg0MDQgMTIuNTY1NEM3NS4xNjIxIC0wLjMzOTkyMyAxMDIuNjU1IC0zLjQ1MjE4IDEyOC4yNzIgMy45MTMzTDExNC4zODYgNTIuMjA2NkMxMDEuNTc4IDQ4LjUyMzkgODcuODMxIDUwLjA4IDc2LjE3MDIgNTYuNTMyN0w1MS44NDA0IDEyLjU2NTRaIiBmaWxsPSIjNEM0RThFIi8+CjxwYXRoIGQ9Ik0xMjguMjM1IDMuOTAyN0MxNDkuMjEyIDkuOTI1NTEgMTY3LjY1OCAyMi42MTMgMTgwLjc4NSA0MC4wNDc2QzE5My45MTMgNTcuNDgyMiAyMDEuMDA5IDc4LjcxNjQgMjAxIDEwMC41NDFMMTUwLjc1IDEwMC41MkMxNTAuNzU0IDg5LjYwODIgMTQ3LjIwNyA3OC45OTExIDE0MC42NDMgNzAuMjczOEMxMzQuMDc5IDYxLjU1NjUgMTI0Ljg1NiA1NS4yMTI3IDExNC4zNjcgNTIuMjAxM0wxMjguMjM1IDMuOTAyN1oiIGZpbGw9IiM0MzJFMkQiLz4KPGNpcmNsZSBjeD0iMTAwLjUwMSIgY3k9IjEwMC40OTkiIHI9IjYwLjUyODQiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" class="graph__part-canvas" id="graph__part-canvas">       
+        <canvas id="canvas" style="display: none;" width="200" height="200"></canvas>
+    </div>
+    <div class="colorPicked">
+        <h2>Color Picked</h2>
+        <div id="box">
+        </div>
+    </div>
+    <script>
+        let img = document.getElementById('graph__part-canvas'),
+        canvas = document.getElementById('canvas'),
+        box = document.getElementById('box');
+        img.addEventListener('mousemove', function(e) {
+            console.log(e);
+
+           // chrome
+            if (e.offsetX) {
+                x = e.offsetX;
+                y = e.offsetY;
+            }
+            // firefox
+            else if (e.layerX) {
+                x = e.layerX;
+                y = e.layerY;
+            }
+            canvas.getContext('2d').drawImage(img,0,0, img.width, img.height);
+            let pixel = canvas.getContext('2d').getImageData(x, y, 1, 1).data;
+            box.style.background = rgbToHexa(pixel[0], pixel[1], pixel[2]).toString();
+            
+         });
+
+         const rgbToHexa = (a, b, c)=>{
+            return "#"+convertToHexa(a)+convertToHexa(b)+convertToHexa(c);
+         }
+
+         const convertToHexa = (c)=>{
+            let hex = c.toString(16);
+            return hex.length == 1 ? "0" + hex : hex;
+         }
+
+    </script>
+</body>
+</html>
